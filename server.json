@@ -1,0 +1,23 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "net.hyperframes/hyperframes",
+  "title": "HyperFrames",
+  "description": "Generate images and video from Claude with one API key.",
+  "version": "1.0.0",
+  "websiteUrl": "https://hyperframes.net/hyperframes-mcp",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://hyperframes.net/api/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer token, sent as: Bearer sk-hh1-... Create a key at https://hyperframes.net/settings/apikeys",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        }
+      ]
+    }
+  ]
+}
